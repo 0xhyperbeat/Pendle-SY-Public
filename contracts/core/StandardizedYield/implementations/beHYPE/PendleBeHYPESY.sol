@@ -10,7 +10,7 @@ contract PendleBeHYPESY is SYBaseUpgV2 {
 
     address public constant BEHYPE = 0xd8FC8F0b03eBA61F64D08B0bef69d80916E5DdA9;
     address public constant STAKING_CORE = 0xCeaD893b162D38e714D82d06a7fe0b0dc3c38E0b;
-    address public WHYPE = 0x5555555555555555555555555555555555555555;
+    address public constant WHYPE = 0x5555555555555555555555555555555555555555;
 
     constructor() SYBaseUpgV2(BEHYPE) {}
 
@@ -26,7 +26,7 @@ contract PendleBeHYPESY is SYBaseUpgV2 {
             return amountDeposited;
         }
         if (tokenIn == WHYPE) {
-            IWETH(WHYPE).withdraw(_amountDeposited);
+            IWETH(WHYPE).withdraw(amountDeposited);
         }
 
         uint256 preBalance = _selfBalance(yieldToken);

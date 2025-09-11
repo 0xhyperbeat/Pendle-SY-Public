@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {IRoleRegistry} from "./IRoleRegistry.sol";
-import {IBeHYPEToken} from "./IBeHype.sol";
-
 /**
  * @title IStakingCore
  * @notice Interface for the StakingCore contract that manages staking operations and exchange ratios
