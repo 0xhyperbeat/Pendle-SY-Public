@@ -51,7 +51,7 @@ contract PendleBeHYPESY is SYBaseUpgV2 {
         address tokenIn,
         uint256 amountTokenToDeposit
     ) internal view virtual override returns (uint256 /*amountSharesOut*/) {
-        if (tokenIn == NATIVE) {
+        if (tokenIn == NATIVE || tokenIn == WHYPE) {
             return IStakingCore(STAKING_CORE).HYPEToBeHYPE(amountTokenToDeposit);
         }
         return amountTokenToDeposit;
