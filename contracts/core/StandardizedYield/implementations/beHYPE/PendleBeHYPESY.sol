@@ -30,7 +30,7 @@ contract PendleBeHYPESY is SYBaseUpgV2 {
         }
 
         uint256 preBalance = _selfBalance(yieldToken);
-        IStakingCore(STAKING_CORE).stake{value: amountDeposited}();
+        IStakingCore(STAKING_CORE).stake{value: amountDeposited}("");
         return _selfBalance(yieldToken) - preBalance;
     }
 
